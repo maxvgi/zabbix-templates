@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2014-04-07T13:20:03Z</date>
+    <date>2014-04-08T07:20:31Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -108,8 +108,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, rejected_connections, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -186,8 +186,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, redis_git_dirty, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -225,8 +225,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, pubsub_channels, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -264,8 +264,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, rdb_bgsave_in_progress, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -303,8 +303,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, rdb_changes_since_last_save, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -381,8 +381,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, total_commands_processed, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -420,13 +420,13 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, used_cpu_user_children, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
+                    <units>cores</units>
+                    <delta>1</delta>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
                     <snmpv3_authpassphrase/>
@@ -459,8 +459,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, used_memory, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -498,8 +498,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, used_memory_peak, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -537,13 +537,13 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, used_cpu_user, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
+                    <units>cores</units>
+                    <delta>1</delta>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
                     <snmpv3_authpassphrase/>
@@ -576,13 +576,13 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, used_cpu_sys_children, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
+                    <units>cores</units>
+                    <delta>1</delta>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
                     <snmpv3_authpassphrase/>
@@ -615,8 +615,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, total_connections_received, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -654,8 +654,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, uptime_in_seconds, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -693,13 +693,13 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, used_cpu_sys, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
+                    <units>cores</units>
+                    <delta>1</delta>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
                     <snmpv3_authpassphrase/>
@@ -771,8 +771,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, mem_fragmentation_ratio, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
@@ -810,8 +810,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, client_longest_output_list, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -849,8 +849,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, connected_clients, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -888,8 +888,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, connected_slaves, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -927,8 +927,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, client_biggest_input_buf, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -1005,8 +1005,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, aof_enabled, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -1044,8 +1044,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, aof_rewrite_in_progress, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -1083,8 +1083,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, aof_rewrite_scheduled, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -1122,8 +1122,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, evicted_keys, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -1161,8 +1161,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, expired_keys, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -1200,8 +1200,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, latest_fork_usec, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -1239,8 +1239,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, loading, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -1278,8 +1278,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, lru_clock, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -1317,8 +1317,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, keyspace_misses, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -1356,8 +1356,8 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, keyspace_hits, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -1434,12 +1434,12 @@
                     <snmp_oid/>
                     <key>redis[{HOSTNAME}, instantaneous_ops_per_sec, none]</key>
                     <delay>60</delay>
-                    <history>3</history>
-                    <trends>90</trends>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
-                    <units/>
+                    <units>ops</units>
                     <delta>0</delta>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1622,6 +1622,16 @@
     </templates>
     <triggers>
         <trigger>
+            <expression>{Template Redis 2:redis[{HOSTNAME}, used_cpu_user, none].avg(600)}+{Template Redis 2:redis[{HOSTNAME}, used_cpu_sys, none].avg(600)}&gt;0.8</expression>
+            <name>Redis cpu usage limit</name>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
             <expression>{Template Redis 2:net.tcp.port[127.0.0.1,6379].last(0)}=0</expression>
             <name>Redis is down on {HOSTNAME}</name>
             <url/>
@@ -1642,4 +1652,82 @@
             <dependencies/>
         </trigger>
     </triggers>
+    <graphs>
+        <graph>
+            <name>Redis CPU usage</name>
+            <width>900</width>
+            <height>200</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>1</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>0</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>3333FF</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Redis 2</host>
+                        <key>redis[{HOSTNAME}, used_cpu_sys, none]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>00DD00</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Redis 2</host>
+                        <key>redis[{HOSTNAME}, used_cpu_user, none]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Redis operations per second</name>
+            <width>900</width>
+            <height>200</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>0</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>C80000</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Redis 2</host>
+                        <key>redis[{HOSTNAME}, instantaneous_ops_per_sec, none]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
 </zabbix_export>
