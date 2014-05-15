@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2014-04-07T13:19:52Z</date>
+    <date>2014-05-15T11:34:05Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -309,11 +309,11 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{Template php-fpm:php-fpm[&quot;active processes&quot;,{$PHP_FPM_STATUS_URL}].nodata(70)}=1 | {Template php-fpm:php-fpm[&quot;active processes&quot;,{$PHP_FPM_STATUS_URL}].last(0)}&lt;0</expression>
+            <expression>{Template php-fpm:php-fpm[&quot;active processes&quot;,{$PHP_FPM_STATUS_URL}].nodata(220)}=1 | {Template php-fpm:php-fpm[&quot;active processes&quot;,{$PHP_FPM_STATUS_URL}].last(0)}&lt;0</expression>
             <name>PHP-fpm of {HOSTNAME} is down</name>
             <url/>
             <status>0</status>
-            <priority>1</priority>
+            <priority>5</priority>
             <description/>
             <type>0</type>
             <dependencies/>
@@ -404,7 +404,7 @@
             <yaxismax>100.0000</yaxismax>
             <show_work_period>1</show_work_period>
             <show_triggers>1</show_triggers>
-            <type>0</type>
+            <type>1</type>
             <show_legend>1</show_legend>
             <show_3d>0</show_3d>
             <percent_left>0.0000</percent_left>
@@ -417,21 +417,9 @@
                 <graph_item>
                     <sortorder>0</sortorder>
                     <drawtype>0</drawtype>
-                    <color>C80000</color>
+                    <color>EE0000</color>
                     <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>Template php-fpm</host>
-                        <key>php-fpm[&quot;total processes&quot;,{$PHP_FPM_STATUS_URL}]</key>
-                    </item>
-                </graph_item>
-                <graph_item>
-                    <sortorder>1</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>00C800</color>
-                    <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
+                    <calc_fnc>4</calc_fnc>
                     <type>0</type>
                     <item>
                         <host>Template php-fpm</host>
@@ -439,11 +427,11 @@
                     </item>
                 </graph_item>
                 <graph_item>
-                    <sortorder>2</sortorder>
+                    <sortorder>1</sortorder>
                     <drawtype>0</drawtype>
-                    <color>0000C8</color>
+                    <color>00EE00</color>
                     <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
+                    <calc_fnc>1</calc_fnc>
                     <type>0</type>
                     <item>
                         <host>Template php-fpm</host>

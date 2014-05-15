@@ -13,7 +13,7 @@ if [ "$2" != "" ] ; then
     DEFAULT_HOST=$2
 fi
 
-down=`asinfo -h 10.0.0.1 -v version | grep error | wc -l`
+down=`asinfo -h $DEFAULT_HOST -v version | grep error | wc -l`
 
 if [ "$down" = "1" ] ; then
     echo "-1"
