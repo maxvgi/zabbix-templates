@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2014-05-15T11:21:32Z</date>
+    <date>2014-05-20T09:40:21Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -28,7 +28,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[client_connections,{$HOST}]</key>
+                    <key>aerospike[client_connections,{$AEROSPIKE_IP}]</key>
                     <delay>60</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -67,7 +67,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[objects,{$HOST}]</key>
+                    <key>aerospike[objects,{$AEROSPIKE_IP}]</key>
                     <delay>60</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -106,7 +106,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[cluster_size,{$HOST}]</key>
+                    <key>aerospike[cluster_size,{$AEROSPIKE_IP}]</key>
                     <delay>60</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -145,7 +145,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[transactions,{$HOST}]</key>
+                    <key>aerospike[transactions,{$AEROSPIKE_IP}]</key>
                     <delay>60</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -184,7 +184,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[stat_evicted_objects,{$HOST}]</key>
+                    <key>aerospike[stat_evicted_objects,{$AEROSPIKE_IP}]</key>
                     <delay>60</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -223,7 +223,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[stat_expired_objects,{$HOST}]</key>
+                    <key>aerospike[stat_expired_objects,{$AEROSPIKE_IP}]</key>
                     <delay>60</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -262,7 +262,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[free-pct-disk,{$HOST}]</key>
+                    <key>aerospike[free-pct-disk,{$AEROSPIKE_IP}]</key>
                     <delay>300</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -301,7 +301,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[free-pct-memory,{$HOST}]</key>
+                    <key>aerospike[free-pct-memory,{$AEROSPIKE_IP}]</key>
                     <delay>300</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -335,17 +335,95 @@
                     <valuemap/>
                 </item>
                 <item>
-                    <name>Long read requests</name>
+                    <name>Long read requests &gt;1ms</name>
                     <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[stat_read_latency_gt50,{$HOST}]</key>
+                    <key>aerospike[latency,{$AEROSPIKE_IP},1]</key>
                     <delay>60</delay>
                     <history>90</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>rps</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Aerospike</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>Long read requests &gt;8ms</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>aerospike[latency,{$AEROSPIKE_IP},8]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>rps</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Aerospike</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>Long read requests &gt;50ms</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>aerospike[stat_read_latency_gt50,{$AEROSPIKE_IP}]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>rps</units>
                     <delta>1</delta>
@@ -374,17 +452,173 @@
                     <valuemap/>
                 </item>
                 <item>
-                    <name>Long write requests</name>
+                    <name>Long read requests &gt;100ms</name>
                     <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[stat_write_latency_gt50,{$HOST}]</key>
+                    <key>aerospike[stat_read_latency_gt100,{$AEROSPIKE_IP}]</key>
                     <delay>60</delay>
                     <history>90</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>rps</units>
+                    <delta>1</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Aerospike</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>Long read requests &gt;250ms</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>aerospike[stat_read_latency_gt250,{$AEROSPIKE_IP}]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>rps</units>
+                    <delta>1</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Aerospike</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>Long write requests &gt;50ms</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>aerospike[stat_write_latency_gt50,{$AEROSPIKE_IP}]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>rps</units>
+                    <delta>1</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Aerospike</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>Long write requests &gt;100ms</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>aerospike[stat_write_latency_gt100,{$AEROSPIKE_IP}]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>rps</units>
+                    <delta>1</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Aerospike</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>Long write requests &gt;250ms</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>aerospike[stat_write_latency_gt250,{$AEROSPIKE_IP}]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>rps</units>
                     <delta>1</delta>
@@ -418,7 +652,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[migrate_progress_recv,{$HOST}]</key>
+                    <key>aerospike[migrate_progress_recv,{$AEROSPIKE_IP}]</key>
                     <delay>120</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -457,7 +691,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[migrate_progress_send,{$HOST}]</key>
+                    <key>aerospike[migrate_progress_send,{$AEROSPIKE_IP}]</key>
                     <delay>120</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -491,12 +725,51 @@
                     <valuemap/>
                 </item>
                 <item>
+                    <name>Percent of success reads</name>
+                    <type>15</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>aerospike[read_success_percent,{$AEROSPIKE_IP}]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>%</units>
+                    <delta>0</delta>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params>100*last(&quot;aerospike[stat_read_success,{$AEROSPIKE_IP}]&quot;)/last(&quot;aerospike[stat_read_reqs,{$AEROSPIKE_IP}]&quot;)</params>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Aerospike</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
                     <name>Read requests errors - not found</name>
                     <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[stat_read_errs_notfound,{$HOST}]</key>
+                    <key>aerospike[stat_read_errs_notfound,{$AEROSPIKE_IP}]</key>
                     <delay>60</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -535,7 +808,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[stat_delete_success,{$HOST}]</key>
+                    <key>aerospike[stat_delete_success,{$AEROSPIKE_IP}]</key>
                     <delay>60</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -574,7 +847,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[stat_read_success,{$HOST}]</key>
+                    <key>aerospike[stat_read_success,{$AEROSPIKE_IP}]</key>
                     <delay>60</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -613,7 +886,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[stat_write_success,{$HOST}]</key>
+                    <key>aerospike[stat_write_success,{$AEROSPIKE_IP}]</key>
                     <delay>60</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -652,7 +925,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[system_free_mem_pct,{$HOST}]</key>
+                    <key>aerospike[system_free_mem_pct,{$AEROSPIKE_IP}]</key>
                     <delay>60</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -691,7 +964,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[total-bytes-disk,{$HOST}]</key>
+                    <key>aerospike[total-bytes-disk,{$AEROSPIKE_IP}]</key>
                     <delay>3600</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -730,7 +1003,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[total-bytes-memory,{$HOST}]</key>
+                    <key>aerospike[total-bytes-memory,{$AEROSPIKE_IP}]</key>
                     <delay>3600</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -769,7 +1042,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[stat_read_reqs,{$HOST}]</key>
+                    <key>aerospike[stat_read_reqs,{$AEROSPIKE_IP}]</key>
                     <delay>60</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -808,7 +1081,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[stat_write_reqs,{$HOST}]</key>
+                    <key>aerospike[stat_write_reqs,{$AEROSPIKE_IP}]</key>
                     <delay>60</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -847,7 +1120,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[write_master,{$HOST}]</key>
+                    <key>aerospike[write_master,{$AEROSPIKE_IP}]</key>
                     <delay>60</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -886,7 +1159,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[uptime,{$HOST}]</key>
+                    <key>aerospike[uptime,{$AEROSPIKE_IP}]</key>
                     <delay>60</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -925,7 +1198,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[used-bytes-disk,{$HOST}]</key>
+                    <key>aerospike[used-bytes-disk,{$AEROSPIKE_IP}]</key>
                     <delay>300</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -964,7 +1237,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[used-bytes-memory,{$HOST}]</key>
+                    <key>aerospike[used-bytes-memory,{$AEROSPIKE_IP}]</key>
                     <delay>300</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -1003,7 +1276,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>aerospike[stat_write_errs,{$HOST}]</key>
+                    <key>aerospike[stat_write_errs,{$AEROSPIKE_IP}]</key>
                     <delay>60</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -1037,7 +1310,77 @@
                     <valuemap/>
                 </item>
             </items>
-            <discovery_rules/>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Sets</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>aerospike[sets,{$AEROSPIKE_IP}]</key>
+                    <delay>3600</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <filter>{#SET}:</filter>
+                    <lifetime>60</lifetime>
+                    <description/>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Set {#SET} size</name>
+                            <type>0</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>aerospike[sets,{$AEROSPIKE_IP},{#SET}]</key>
+                            <delay>60</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Aerospike</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes/>
+                    <graph_prototypes/>
+                </discovery_rule>
+            </discovery_rules>
             <macros>
                 <macro>
                     <macro>{$HOST}</macro>
@@ -1050,7 +1393,7 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{Template Aerospike:aerospike[stat_write_errs,{$HOST}].min(#3)}&gt;0</expression>
+            <expression>{Template Aerospike:aerospike[stat_write_errs,{$AEROSPIKE_IP}].min(#3)}&gt;0</expression>
             <name>Aerospike is experienced write errors</name>
             <url/>
             <status>0</status>
@@ -1060,7 +1403,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template Aerospike:aerospike[cluster_size,{$HOST}].last(0)}&lt;0</expression>
+            <expression>{Template Aerospike:aerospike[cluster_size,{$AEROSPIKE_IP}].last(0)}&lt;0</expression>
             <name>Aerospike is not running</name>
             <url/>
             <status>0</status>
@@ -1070,7 +1413,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template Aerospike:aerospike[free-pct-disk,{$HOST}].last(0)}&lt;50</expression>
+            <expression>{Template Aerospike:aerospike[free-pct-disk,{$AEROSPIKE_IP}].last(0)}&lt;50</expression>
             <name>Aerospike is out of disk</name>
             <url/>
             <status>0</status>
@@ -1080,7 +1423,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template Aerospike:aerospike[free-pct-memory,{$HOST}].last(0)}&lt;50</expression>
+            <expression>{Template Aerospike:aerospike[free-pct-memory,{$AEROSPIKE_IP}].last(0)}&lt;50</expression>
             <name>Aerospike is out of memory</name>
             <url/>
             <status>0</status>
@@ -1090,7 +1433,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template Aerospike:aerospike[uptime,{$HOST}].diff()}&lt;0</expression>
+            <expression>{Template Aerospike:aerospike[uptime,{$AEROSPIKE_IP}].diff()}&lt;0</expression>
             <name>Aerospike on {HOSTNAME} restarted</name>
             <url/>
             <status>0</status>
@@ -1100,7 +1443,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template Aerospike:aerospike[stat_evicted_objects,{$HOST}].diff()}&gt;0</expression>
+            <expression>{Template Aerospike:aerospike[stat_evicted_objects,{$AEROSPIKE_IP}].diff()}&gt;0</expression>
             <name>Evicting objects</name>
             <url/>
             <status>0</status>
@@ -1110,7 +1453,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template Aerospike:aerospike[stat_read_latency_gt50,{$HOST}].min(#5)}&gt;0</expression>
+            <expression>{Template Aerospike:aerospike[stat_read_latency_gt50,{$AEROSPIKE_IP}].min(#5)}&gt;0</expression>
             <name>Read operations slowed down</name>
             <url/>
             <status>0</status>
@@ -1120,7 +1463,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template Aerospike:aerospike[cluster_size,{$HOST}].change()}&lt;0</expression>
+            <expression>{Template Aerospike:aerospike[cluster_size,{$AEROSPIKE_IP}].change()}&lt;0</expression>
             <name>Some nodes are down</name>
             <url/>
             <status>0</status>
@@ -1130,7 +1473,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template Aerospike:aerospike[cluster_size,{$HOST}].change()}&gt;0</expression>
+            <expression>{Template Aerospike:aerospike[cluster_size,{$AEROSPIKE_IP}].change()}&gt;0</expression>
             <name>Some nodes are up</name>
             <url/>
             <status>0</status>
@@ -1140,7 +1483,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template Aerospike:aerospike[system_free_mem_pct,{$HOST}].last(0)}&lt;10</expression>
+            <expression>{Template Aerospike:aerospike[system_free_mem_pct,{$AEROSPIKE_IP}].last(0)}&lt;10</expression>
             <name>System is out of memory</name>
             <url/>
             <status>0</status>
@@ -1178,7 +1521,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Aerospike</host>
-                        <key>aerospike[stat_write_reqs,{$HOST}]</key>
+                        <key>aerospike[stat_write_reqs,{$AEROSPIKE_IP}]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1190,7 +1533,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Aerospike</host>
-                        <key>aerospike[stat_read_reqs,{$HOST}]</key>
+                        <key>aerospike[stat_read_reqs,{$AEROSPIKE_IP}]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1202,7 +1545,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Aerospike</host>
-                        <key>aerospike[stat_delete_success,{$HOST}]</key>
+                        <key>aerospike[stat_delete_success,{$AEROSPIKE_IP}]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1214,7 +1557,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Aerospike</host>
-                        <key>aerospike[stat_read_latency_gt50,{$HOST}]</key>
+                        <key>aerospike[stat_read_latency_gt50,{$AEROSPIKE_IP}]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1226,7 +1569,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Aerospike</host>
-                        <key>aerospike[stat_write_latency_gt50,{$HOST}]</key>
+                        <key>aerospike[stat_write_latency_gt50,{$AEROSPIKE_IP}]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1238,7 +1581,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Aerospike</host>
-                        <key>aerospike[stat_read_errs_notfound,{$HOST}]</key>
+                        <key>aerospike[stat_read_errs_notfound,{$AEROSPIKE_IP}]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1250,7 +1593,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Aerospike</host>
-                        <key>aerospike[stat_expired_objects,{$HOST}]</key>
+                        <key>aerospike[stat_expired_objects,{$AEROSPIKE_IP}]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1262,7 +1605,123 @@
                     <type>0</type>
                     <item>
                         <host>Template Aerospike</host>
-                        <key>aerospike[stat_evicted_objects,{$HOST}]</key>
+                        <key>aerospike[stat_evicted_objects,{$AEROSPIKE_IP}]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Aerospike latencies</name>
+            <width>900</width>
+            <height>200</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>0</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>C80000</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Aerospike</host>
+                        <key>aerospike[latency,{$AEROSPIKE_IP},1]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>00C800</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Aerospike</host>
+                        <key>aerospike[latency,{$AEROSPIKE_IP},8]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>2</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>0000C8</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Aerospike</host>
+                        <key>aerospike[stat_read_latency_gt50,{$AEROSPIKE_IP}]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>3</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>C800C8</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Aerospike</host>
+                        <key>aerospike[stat_read_latency_gt100,{$AEROSPIKE_IP}]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>4</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>00C8C8</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Aerospike</host>
+                        <key>aerospike[stat_read_latency_gt250,{$AEROSPIKE_IP}]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>5</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>C8C800</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Aerospike</host>
+                        <key>aerospike[stat_write_latency_gt50,{$AEROSPIKE_IP}]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>6</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>C8C8C8</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Aerospike</host>
+                        <key>aerospike[stat_write_latency_gt100,{$AEROSPIKE_IP}]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>7</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>960000</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Aerospike</host>
+                        <key>aerospike[stat_write_latency_gt250,{$AEROSPIKE_IP}]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -1294,7 +1753,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Aerospike</host>
-                        <key>aerospike[total-bytes-memory,{$HOST}]</key>
+                        <key>aerospike[total-bytes-memory,{$AEROSPIKE_IP}]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1306,7 +1765,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Aerospike</host>
-                        <key>aerospike[used-bytes-disk,{$HOST}]</key>
+                        <key>aerospike[used-bytes-disk,{$AEROSPIKE_IP}]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1318,7 +1777,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Aerospike</host>
-                        <key>aerospike[used-bytes-memory,{$HOST}]</key>
+                        <key>aerospike[used-bytes-memory,{$AEROSPIKE_IP}]</key>
                     </item>
                 </graph_item>
             </graph_items>
