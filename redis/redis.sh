@@ -9,8 +9,9 @@ DB="$3"
 PORT="6379"
 
 if [[ -z "$1" ]]; then
-    echo "Please set server"
-    exit 1
+    #echo "Please set server"
+    #exit 1
+    SERV=127.0.0.1
 fi
 
 CACHETTL="55" # Время действия кеша в секундах (чуть меньше чем период опроса элементов)

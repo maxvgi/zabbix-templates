@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2015-10-12T08:46:18Z</date>
+    <date>2015-10-12T08:45:56Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>Template php-fpm</template>
-            <name>Template php-fpm</name>
+            <template>Template Nginx-Background</template>
+            <name>Template Nginx-Background</name>
             <description/>
             <groups>
                 <group>
@@ -19,19 +19,19 @@
             </groups>
             <applications>
                 <application>
-                    <name>php-fpm</name>
+                    <name>Nginx-Background</name>
                 </application>
             </applications>
             <items>
                 <item>
-                    <name>$1</name>
+                    <name>Nginx $1</name>
                     <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>php-fpm[&quot;total processes&quot;,{$PHP_FPM_STATUS_URL}]</key>
+                    <key>nginx-background[waiting,{$NGINX_BACKGROUND_STATUS_URL}]</key>
                     <delay>60</delay>
-                    <history>90</history>
+                    <history>30</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>0</value_type>
@@ -60,21 +60,21 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>php-fpm</name>
+                            <name>Nginx-Background</name>
                         </application>
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>$1</name>
+                    <name>Nginx $1</name>
                     <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>php-fpm[&quot;listen queue&quot;,{$PHP_FPM_STATUS_URL}]</key>
+                    <key>nginx-background[writing,{$NGINX_BACKGROUND_STATUS_URL}]</key>
                     <delay>60</delay>
-                    <history>90</history>
+                    <history>30</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>0</value_type>
@@ -103,21 +103,21 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>php-fpm</name>
+                            <name>Nginx-Background</name>
                         </application>
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>$1</name>
+                    <name>Nginx $1</name>
                     <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>php-fpm[&quot;listen queue len&quot;,{$PHP_FPM_STATUS_URL}]</key>
+                    <key>nginx-background[active_connections,{$NGINX_BACKGROUND_STATUS_URL}]</key>
                     <delay>60</delay>
-                    <history>90</history>
+                    <history>30</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>0</value_type>
@@ -146,21 +146,21 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>php-fpm</name>
+                            <name>Nginx-Background</name>
                         </application>
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>$1</name>
+                    <name>Nginx $1</name>
                     <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>php-fpm[&quot;active processes&quot;,{$PHP_FPM_STATUS_URL}]</key>
+                    <key>nginx-background[reading,{$NGINX_BACKGROUND_STATUS_URL}]</key>
                     <delay>60</delay>
-                    <history>90</history>
+                    <history>30</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>0</value_type>
@@ -189,64 +189,21 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>php-fpm</name>
+                            <name>Nginx-Background</name>
                         </application>
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>$1</name>
+                    <name>Nginx $1/sec</name>
                     <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>php-fpm[&quot;idle processes&quot;,{$PHP_FPM_STATUS_URL}]</key>
+                    <key>nginx-background[handled_connections,{$NGINX_BACKGROUND_STATUS_URL}]</key>
                     <delay>60</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>0</status>
-                    <value_type>0</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>php-fpm</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                    <logtimefmt/>
-                </item>
-                <item>
-                    <name>$1/sec</name>
-                    <type>0</type>
-                    <snmp_community/>
-                    <multiplier>0</multiplier>
-                    <snmp_oid/>
-                    <key>php-fpm[&quot;accepted conn&quot;,{$PHP_FPM_STATUS_URL}]</key>
-                    <delay>60</delay>
-                    <history>90</history>
+                    <history>30</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>0</value_type>
@@ -275,21 +232,21 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>php-fpm</name>
+                            <name>Nginx-Background</name>
                         </application>
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>$1/sec</name>
+                    <name>Nginx $1/sec</name>
                     <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>php-fpm[&quot;slow requests&quot;,{$PHP_FPM_STATUS_URL}]</key>
+                    <key>nginx-background[handled_requests,{$NGINX_BACKGROUND_STATUS_URL}]</key>
                     <delay>60</delay>
-                    <history>90</history>
+                    <history>30</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>0</value_type>
@@ -318,7 +275,93 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>php-fpm</name>
+                            <name>Nginx-Background</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Nginx $1/sec</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>nginx-background[accepted_connections,{$NGINX_BACKGROUND_STATUS_URL}]</key>
+                    <delay>60</delay>
+                    <history>30</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>1</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Nginx-Background</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Nginx failed connections</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>nginx-background[failed_connections,{$NGINX_BACKGROUND_STATUS_URL}]</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>1</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Nginx-Background</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -328,8 +371,8 @@
             <discovery_rules/>
             <macros>
                 <macro>
-                    <macro>{$PHP_FPM_STATUS_URL}</macro>
-                    <value>http://127.0.0.1:10061/php-fpm_status</value>
+                    <macro>{$NGINX_BACKGROUND_STATUS_URL}</macro>
+                    <value>http://127.0.0.1/nginx_status</value>
                 </macro>
             </macros>
             <templates/>
@@ -338,170 +381,125 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{Template php-fpm:php-fpm[&quot;active processes&quot;,{$PHP_FPM_STATUS_URL}].nodata(220)}=1 or {Template php-fpm:php-fpm[&quot;active processes&quot;,{$PHP_FPM_STATUS_URL}].last(0)}&lt;0</expression>
-            <name>PHP-fpm of {HOSTNAME} is down</name>
+            <expression>{Template Nginx-Background:nginx-background[failed_connections,{$NGINX_BACKGROUND_STATUS_URL}].last(0)}&gt;0</expression>
+            <name>Not enough NGINX {HOSTNAME} workers</name>
             <url/>
             <status>0</status>
-            <priority>5</priority>
+            <priority>3</priority>
             <description/>
             <type>0</type>
-            <dependencies>
-                <dependency>
-                    <name>Zabbix agent on {HOST.NAME} is unreachable for 5 minutes</name>
-                    <expression>{Template OS Linux:agent.ping.nodata(5m)}=1</expression>
-                </dependency>
-            </dependencies>
+            <dependencies/>
         </trigger>
     </triggers>
     <graphs>
         <graph>
-            <name>php-fpm Accepted Connections / sec</name>
+            <name>Nginx-Background - Connections and Requests status</name>
             <width>900</width>
             <height>200</height>
             <yaxismin>0.0000</yaxismin>
             <yaxismax>100.0000</yaxismax>
-            <show_work_period>1</show_work_period>
-            <show_triggers>1</show_triggers>
+            <show_work_period>0</show_work_period>
+            <show_triggers>0</show_triggers>
             <type>0</type>
             <show_legend>1</show_legend>
             <show_3d>0</show_3d>
             <percent_left>0.0000</percent_left>
             <percent_right>0.0000</percent_right>
-            <ymin_type_1>0</ymin_type_1>
+            <ymin_type_1>1</ymin_type_1>
             <ymax_type_1>0</ymax_type_1>
             <ymin_item_1>0</ymin_item_1>
             <ymax_item_1>0</ymax_item_1>
             <graph_items>
                 <graph_item>
                     <sortorder>0</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>C80000</color>
+                    <drawtype>1</drawtype>
+                    <color>FF9999</color>
                     <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
+                    <calc_fnc>4</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template php-fpm</host>
-                        <key>php-fpm[&quot;accepted conn&quot;,{$PHP_FPM_STATUS_URL}]</key>
-                    </item>
-                </graph_item>
-            </graph_items>
-        </graph>
-        <graph>
-            <name>php-fpm Listen Queue</name>
-            <width>900</width>
-            <height>200</height>
-            <yaxismin>0.0000</yaxismin>
-            <yaxismax>100.0000</yaxismax>
-            <show_work_period>1</show_work_period>
-            <show_triggers>1</show_triggers>
-            <type>0</type>
-            <show_legend>1</show_legend>
-            <show_3d>0</show_3d>
-            <percent_left>0.0000</percent_left>
-            <percent_right>0.0000</percent_right>
-            <ymin_type_1>0</ymin_type_1>
-            <ymax_type_1>0</ymax_type_1>
-            <ymin_item_1>0</ymin_item_1>
-            <ymax_item_1>0</ymax_item_1>
-            <graph_items>
-                <graph_item>
-                    <sortorder>0</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>EE0000</color>
-                    <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>Template php-fpm</host>
-                        <key>php-fpm[&quot;listen queue len&quot;,{$PHP_FPM_STATUS_URL}]</key>
+                        <host>Template Nginx-Background</host>
+                        <key>nginx-background[accepted_connections,{$NGINX_BACKGROUND_STATUS_URL}]</key>
                     </item>
                 </graph_item>
                 <graph_item>
                     <sortorder>1</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>00EE00</color>
+                    <drawtype>2</drawtype>
+                    <color>990000</color>
                     <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
+                    <calc_fnc>4</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template php-fpm</host>
-                        <key>php-fpm[&quot;listen queue&quot;,{$PHP_FPM_STATUS_URL}]</key>
+                        <host>Template Nginx-Background</host>
+                        <key>nginx-background[handled_connections,{$NGINX_BACKGROUND_STATUS_URL}]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>2</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>009900</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>4</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Nginx-Background</host>
+                        <key>nginx-background[handled_requests,{$NGINX_BACKGROUND_STATUS_URL}]</key>
                     </item>
                 </graph_item>
             </graph_items>
         </graph>
         <graph>
-            <name>php-fpm Processes</name>
+            <name>Nginx-Background - Threads status</name>
             <width>900</width>
             <height>200</height>
             <yaxismin>0.0000</yaxismin>
             <yaxismax>100.0000</yaxismax>
-            <show_work_period>1</show_work_period>
-            <show_triggers>1</show_triggers>
+            <show_work_period>0</show_work_period>
+            <show_triggers>0</show_triggers>
             <type>1</type>
             <show_legend>1</show_legend>
             <show_3d>0</show_3d>
             <percent_left>0.0000</percent_left>
             <percent_right>0.0000</percent_right>
-            <ymin_type_1>0</ymin_type_1>
+            <ymin_type_1>1</ymin_type_1>
             <ymax_type_1>0</ymax_type_1>
             <ymin_item_1>0</ymin_item_1>
             <ymax_item_1>0</ymax_item_1>
             <graph_items>
                 <graph_item>
                     <sortorder>0</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>EE0000</color>
+                    <drawtype>5</drawtype>
+                    <color>990000</color>
                     <yaxisside>0</yaxisside>
                     <calc_fnc>4</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template php-fpm</host>
-                        <key>php-fpm[&quot;active processes&quot;,{$PHP_FPM_STATUS_URL}]</key>
+                        <host>Template Nginx-Background</host>
+                        <key>nginx-background[writing,{$NGINX_BACKGROUND_STATUS_URL}]</key>
                     </item>
                 </graph_item>
                 <graph_item>
                     <sortorder>1</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>00EE00</color>
+                    <drawtype>5</drawtype>
+                    <color>999900</color>
                     <yaxisside>0</yaxisside>
-                    <calc_fnc>1</calc_fnc>
+                    <calc_fnc>4</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template php-fpm</host>
-                        <key>php-fpm[&quot;idle processes&quot;,{$PHP_FPM_STATUS_URL}]</key>
+                        <host>Template Nginx-Background</host>
+                        <key>nginx-background[reading,{$NGINX_BACKGROUND_STATUS_URL}]</key>
                     </item>
                 </graph_item>
-            </graph_items>
-        </graph>
-        <graph>
-            <name>php-fpm Slow Requests / sec</name>
-            <width>900</width>
-            <height>200</height>
-            <yaxismin>0.0000</yaxismin>
-            <yaxismax>100.0000</yaxismax>
-            <show_work_period>1</show_work_period>
-            <show_triggers>1</show_triggers>
-            <type>0</type>
-            <show_legend>1</show_legend>
-            <show_3d>0</show_3d>
-            <percent_left>0.0000</percent_left>
-            <percent_right>0.0000</percent_right>
-            <ymin_type_1>0</ymin_type_1>
-            <ymax_type_1>0</ymax_type_1>
-            <ymin_item_1>0</ymin_item_1>
-            <ymax_item_1>0</ymax_item_1>
-            <graph_items>
                 <graph_item>
-                    <sortorder>0</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>C80000</color>
+                    <sortorder>2</sortorder>
+                    <drawtype>5</drawtype>
+                    <color>009900</color>
                     <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
+                    <calc_fnc>4</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template php-fpm</host>
-                        <key>php-fpm[&quot;slow requests&quot;,{$PHP_FPM_STATUS_URL}]</key>
+                        <host>Template Nginx-Background</host>
+                        <key>nginx-background[waiting,{$NGINX_BACKGROUND_STATUS_URL}]</key>
                     </item>
                 </graph_item>
             </graph_items>

@@ -18,7 +18,7 @@ ZBX_REQ_DATA="$1"
 ZBX_REQ_DATA_URL="$2"
 
 # Nginx defaults
-NGINX_STATUS_DEFAULT_URL="http://x.ulogix.ru/fpm/10.0.0.2"
+NGINX_STATUS_DEFAULT_URL="http://localhost/fpm/status"
 WGET_BIN="/usr/bin/wget"
 
 #
@@ -26,10 +26,10 @@ WGET_BIN="/usr/bin/wget"
 #  - need to be displayable in Zabbix (avoid NOT_SUPPORTED)
 #  - items need to be of type "float" (allow negative + float)
 #
-ERROR_NO_ACCESS_FILE="-0.9900"
-ERROR_NO_ACCESS="-0.9901"
-ERROR_WRONG_PARAM="-0.9902"
-ERROR_DATA="-0.9903" # either can not connect /	bad host / bad port
+ERROR_NO_ACCESS_FILE="-0.91"
+ERROR_NO_ACCESS="-0.92"
+ERROR_WRONG_PARAM="-0.93"
+ERROR_DATA="-0.94" # either can not connect /	bad host / bad port
 
 # Handle host and port if non-default
 if [ ! -z "$ZBX_REQ_DATA_URL" ]; then
@@ -39,7 +39,7 @@ else
 fi
 
 # save the nginx stats in a variable for future parsing
-NGINX_STATS=$($WGET_BIN -q $URL -O - 2> /dev/null)
+NGINX_STATS=$($WGET_BIN -q $URL -O - 2>/dev/null)
 
 # error during retrieve
 if [ $? -ne 0 -o -z "$NGINX_STATS" ]; then
