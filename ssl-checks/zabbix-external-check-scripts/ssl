@@ -1,0 +1,35 @@
+#!/usr/bin/perl
+
+use POSIX;
+
+$action=$ARGV[0];
+$domain=$ARGV[1];
+
+if($action eq 'daysBeforeExpiration') {
+  $notAfterDate=`echo | openssl s_client -servername $domain -connect $domain:443 2>/dev/null | openssl x509 -noout -dates | grep notAfter | awk -F'=' '{print \$2;}' 2>/dev/null`;
+  $expirationTimestamp=`date --date="$notAfterDate" +%s`;
+  $currentTimestamp=`date +%s`;
+  print floor(($expirationTimestamp-$currentTimestamp)/3600/24);
+} elsif($action eq 'isDomainValid') {
+  $mainDomain=`echo | openssl s_client -servername $domain -connect $domain:443 2>/dev/null | openssl x509 -noout -subject | awk -F'=' '{print \$3;}'`;
+  $additionalDomains=`echo | openssl s_client -servername $domain -connect $domain:443 2>/dev/null | openssl x509 -noout -text | grep DNS:`;
+
+  @additionalDomains = split /,?[\n\s]*DNS:[\s\n]*/g, $additionalDomains;
+
+  @domains = ($mainDomain, @additionalDomains);
+  %validDomains = ();
+
+  foreach $domain (@domains) {
+    $domain =~ s/[\s\n]*//g;
+    if(! ($domain eq '')) {
+      $validDomains{$domain} = 1;
+    }
+  }
+
+  print exists($validDomains{$domain}) ? 1 : 0;
+} else {
+  print "Invalid action\n";
+  exit 1;
+}
+
+print "\n";
